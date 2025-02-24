@@ -25,15 +25,6 @@ from src.utils.visualization import (
 # Set page configuration
 st.set_page_config(**PAGE_CONFIG)
 
-# Ensure file exists
-# Download the file
-gdown.download(f"https://drive.google.com/uc?id={GDRIVE_FILE_ID}", DATA_PATH, quiet=False)
-
-# Verify the downloaded file
-if os.path.exists(DATA_PATH):
-    print("✅ File downloaded successfully.")
-else:
-    print("❌ Download failed.")
 
 
 

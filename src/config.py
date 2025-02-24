@@ -72,7 +72,7 @@
 import os
 
 # Google Drive File ID (Extracted from your link)
-GDRIVE_FILE_ID = "1LOyMiTshCpqMI5nl0B3ZzdT3Uo1fKL8W"
+GDRIVE_FILE_ID = "1sy1iPPr8mWMcU5Q8hiv6n5YETn2Rw5o8"
 DATA_PATH = os.path.join(os.getcwd(), "new_file (1).zip")  # Local file after download
 
 # Project paths

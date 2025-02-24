@@ -14,7 +14,6 @@
 #     except Exception as e:
 #         st.error(f"Error loading data: {str(e)}")
 #         return None
-
 import os
 import zipfile
 import pandas as pd
@@ -34,8 +33,15 @@ def load_data():
             with zipfile.ZipFile(DATA_PATH, 'r') as zip_ref:
                 zip_ref.extractall(EXTRACT_DIR)
 
-            # Assuming CSV is inside the ZIP, update with actual filename
-            csv_path = os.path.join(EXTRACT_DIR, "your_dataset.csv")
+            # Automatically find the extracted CSV file
+            extracted_files = os.listdir(EXTRACT_DIR)
+            csv_files = [f for f in extracted_files if f.endswith(".csv")]
+
+            if not csv_files:
+                st.error("No CSV file found in the extracted ZIP.")
+                return None
+
+            csv_path = os.path.join(EXTRACT_DIR, csv_files[0])  # Pick the first CSV file
         else:
             csv_path = DATA_PATH  # Direct CSV file
 
@@ -46,4 +52,3 @@ def load_data():
     except Exception as e:
         st.error(f"Error loading data: {str(e)}")
         return None
-

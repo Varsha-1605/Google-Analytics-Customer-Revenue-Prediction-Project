@@ -15,7 +15,7 @@
 #         st.error(f"Error loading data: {str(e)}")
 #         return None
 
-
+import zipfile  # Ensure this is imported
 import pandas as pd
 import streamlit as st
 from src.config import DATA_PATH

@@ -3,7 +3,9 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from src.config import PAGE_CONFIG
+from src.config import PAGE_CONFIG, DATA_PATH, GDRIVE_FILE_ID
+import gdown
+import os
 from src.data_loader import load_data
 from src.data_processor import process_data
 from src.analytics.device_analytics import show_device_analytics
@@ -19,6 +21,14 @@ from src.utils.visualization import (
     format_percentage,
     format_number
 )
+
+# Ensure file exists
+if not os.path.exists(DATA_PATH):
+    st.info("Downloading dataset from Google Drive...")
+    url = f"https://drive.google.com/uc?id={GDRIVE_FILE_ID}"
+    gdown.download(url, DATA_PATH, quiet=False)
+    st.success("Download complete!")
+
 
 # Set page configuration
 st.set_page_config(**PAGE_CONFIG)

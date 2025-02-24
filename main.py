@@ -22,6 +22,9 @@ from src.utils.visualization import (
     format_number
 )
 
+# Set page configuration
+st.set_page_config(**PAGE_CONFIG)
+
 # Ensure file exists
 if not os.path.exists(DATA_PATH):
     st.info("Downloading dataset from Google Drive...")
@@ -30,8 +33,7 @@ if not os.path.exists(DATA_PATH):
     st.success("Download complete!")
 
 
-# Set page configuration
-st.set_page_config(**PAGE_CONFIG)
+
 
 def show_overview(df):
     """Display overview page with key metrics."""

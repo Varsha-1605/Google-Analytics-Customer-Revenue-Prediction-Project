@@ -26,12 +26,14 @@ from src.utils.visualization import (
 st.set_page_config(**PAGE_CONFIG)
 
 # Ensure file exists
-if not os.path.exists(DATA_PATH):
-    st.info("Downloading dataset from Google Drive...")
-    url = f"https://drive.google.com/uc?id={GDRIVE_FILE_ID}"
-    gdown.download(url, DATA_PATH, quiet=False)
-    st.success("Download complete!")
+# Download the file
+gdown.download(f"https://drive.google.com/uc?id={GDRIVE_FILE_ID}", DATA_PATH, quiet=False)
 
+# Verify the downloaded file
+if os.path.exists(DATA_PATH):
+    print("✅ File downloaded successfully.")
+else:
+    print("❌ Download failed.")
 
 
 

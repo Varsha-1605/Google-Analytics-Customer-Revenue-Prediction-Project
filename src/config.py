@@ -62,18 +62,14 @@
 
 
 
-
-
-
-
-
 """Configuration settings for the Revenue Analytics Dashboard."""
 
 import os
 
 # Google Drive File ID (Extracted from your link)
 GDRIVE_FILE_ID = "1sy1iPPr8mWMcU5Q8hiv6n5YETn2Rw5o8"
-DATA_PATH = os.path.join(os.getcwd(), "new_file (1).zip")  # Local file after download
+# Define the destination path
+DATA_PATH = os.path.join(os.getcwd(), "data/new_file.zip")
 
 # Project paths
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

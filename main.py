@@ -26,6 +26,48 @@ from src.utils.visualization import (
 st.set_page_config(**PAGE_CONFIG)
 
 
+import os
+import gdown
+import zipfile
+import streamlit as st
+from src.config import GDRIVE_FILE_ID, DATA_PATH, EXTRACT_DIR
+
+# Ensure necessary directories exist
+if not os.path.exists(EXTRACT_DIR):
+    os.makedirs(EXTRACT_DIR)
+
+def download_file():
+    """Download the ZIP file from Google Drive if not already downloaded."""
+    if not os.path.exists(DATA_PATH):
+        st.info("🔽 Downloading dataset...")
+        gdown.download(f"https://drive.google.com/uc?id={GDRIVE_FILE_ID}", DATA_PATH, quiet=False)
+    
+    if os.path.exists(DATA_PATH):
+        st.success("✅ File downloaded successfully.")
+    else:
+        st.error("❌ Download failed.")
+        return False
+    return True
+
+def extract_file():
+    """Extract the downloaded ZIP file."""
+    if os.path.exists(EXTRACT_DIR) and len(os.listdir(EXTRACT_DIR)) > 0:
+        st.success("✅ Data is already extracted.")
+        return  # Skip extraction if already done
+
+    try:
+        with zipfile.ZipFile(DATA_PATH, 'r') as zip_ref:
+            zip_ref.extractall(EXTRACT_DIR)
+        st.success(f"✅ File extracted to: {EXTRACT_DIR}")
+    except zipfile.BadZipFile:
+        st.error("❌ Error: File is not a valid ZIP archive.")
+
+# Ensure the dataset is available before running the dashboard
+if download_file():
+    extract_file()
+
+
+
 
 
 def show_overview(df):

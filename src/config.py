@@ -70,6 +70,15 @@ import os
 GDRIVE_FILE_ID = "1sy1iPPr8mWMcU5Q8hiv6n5YETn2Rw5o8"
 # Define the destination path
 DATA_PATH = os.path.join(os.getcwd(), "data/new_file.zip")
+# Ensure file exists
+# Download the file
+gdown.download(f"https://drive.google.com/uc?id={GDRIVE_FILE_ID}", DATA_PATH, quiet=False)
+
+# Verify the downloaded file
+if os.path.exists(DATA_PATH):
+    print("✅ File downloaded successfully.")
+else:
+    print("❌ Download failed.")
 
 # Project paths
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))

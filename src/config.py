@@ -70,7 +70,7 @@ EXTRACT_DIR = os.path.join(os.getcwd(), "extracted_data")  # Extracted data fold
 
 # Project paths
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))  # Updated for deployment
-MODELS_DIR = os.path.join(PROJECT_ROOT, "models")
+MODELS_DIR = os.path.join(PROJECT_ROOT, "src/models")
 
 # Model file paths
 MODEL_PATH = os.path.join(MODELS_DIR, "revenue_model.joblib")

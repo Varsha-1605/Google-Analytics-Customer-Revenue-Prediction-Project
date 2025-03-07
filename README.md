@@ -27,7 +27,7 @@ This sophisticated machine learning-powered dashboard analyzes customer behavior
 The dashboard processes a large dataset of 903,653 records with 37 features, achieving an RMSE of 1.6194 and an R² Score of 0.3396 in revenue prediction.
 
 <div align="center">
-  <img src="/api/placeholder/820/460" alt="Dashboard Overview" />
+  <img src="![image](https://github.com/user-attachments/assets/9ad4696f-7128-4a92-bb49-25fd7a403560)" alt="Dashboard Overview" />
 </div>
 
 ## 🔑 Key Features

@@ -125,16 +125,6 @@ pip install -r requirements.txt
 streamlit run main.py
 ```
 
-### Docker Deployment
-
-```bash
-# Build Docker image
-docker build -t ga-revenue-prediction:latest .
-
-# Run container
-docker run -p 8501:8501 ga-revenue-prediction:latest
-```
-
 ## 🛠️ Technology Stack
 
 <div align="center">
@@ -164,7 +154,6 @@ The system follows a modular architecture with clear separation of concerns:
 - **Analytics Layer**: Processes data and generates insights
 - **Model Layer**: Manages LightGBM machine learning models and predictions
 - **Visualization Layer**: Creates interactive dashboards and reports
-- **API Layer**: Provides programmatic access to system features
 
 ## 📂 Project Structure
 
@@ -366,22 +355,15 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
 </div>
 
-## 🎓 Documentation
-
-- [User Guide](docs/user_guide.md)
-- [API Documentation](docs/api.md)
-- [Model Information](docs/models.md)
-- [Development Guide](docs/development.md)
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📧 Contact
 
-Project Maintainer - [varshadewangan1605@gmail.com](mailto:varshadewangan1605@gmail.com)
+Project Maintainer - [Varsha Dewangan](https://github.com/Varsha-1605)
 
-Project Link: [https://github.com/Varsha-1605/Google-Analytics-Customer-Revenue-Prediction-Project](https://github.com/Varsha-1605/Google-Analytics-Customer-Revenue-Prediction-Project)
+Project Link: [Google Analytics Customer Reveneue Prediction](https://github.com/Varsha-1605/Google-Analytics-Customer-Revenue-Prediction-Project)
 
 ---
 

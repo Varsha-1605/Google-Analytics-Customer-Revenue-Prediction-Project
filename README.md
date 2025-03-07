@@ -131,11 +131,11 @@ streamlit run main.py
   
 | Category | Technologies |
 |----------|--------------|
-| **Framework** | Streamlit, Flask API Layer |
-| **ML Library** | LightGBM, Scikit-learn, TensorFlow (optional) |
+| **Framework** | Streamlit |
+| **ML Library** | LightGBM, Scikit-learn |
 | **Data Processing** | Pandas, NumPy, Dask (for large datasets) |
 | **Visualization** | Plotly, Altair, Matplotlib |
-| **Monitoring** | Custom Latency Tracker, Prometheus (optional) |
+| **Monitoring** | Custom Latency Tracker |
 | **Logging** | Python Logging, ELK Stack Integration |
 | **Testing** | Pytest, Hypothesis |
 | **CI/CD** | GitHub Actions |

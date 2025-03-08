@@ -96,7 +96,7 @@ The dashboard processes a large dataset of 903,653 records with 37 features, ach
 ## 🎬 Live Demo
 
 Experience the dashboard in action:
-- [Video Walkthrough](https://example.com/video)
+- [Video Walkthrough](https://drive.google.com/file/d/17t9tbrLVk2ELlLIVuOgVKJgDspWG_70Q/view?usp=sharing)
 
 ## 🚀 Quick Start
 

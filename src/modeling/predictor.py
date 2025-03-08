@@ -60,7 +60,7 @@ def make_batch_predictions(model, batch_data):
     """
     try:
         logger.debug(f"Making batch predictions with shape: {batch_data.shape}")
-        predictions = model.predict(batch_data predict_disable_shape_check=True)
+        predictions = model.predict(batch_data, predict_disable_shape_check=True)
         return np.expm1(predictions)
     except Exception as e:
         logger.error("Error in batch prediction", exc_info=True)
